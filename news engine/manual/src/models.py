@@ -20,13 +20,12 @@ class Article:
     secondary_domain: Optional[str] = None
     external_reference_url: Optional[str] = None
     preview_image_url: Optional[str] = None  # OG/Twitter image for frontend cards
-    relevance_score: float = 0.0  # Classification combined score (default 0.0 for non-matches)
+    relevance_score: Optional[float] = None  # Classification combined score
     
     @classmethod
     def create(cls, title: str, source: str, published_date: str, 
                url: str, summary: str, domains: List[str] = None,
-               primary_domain: str = None, secondary_domain: str = None,
-               relevance_score: float = 0.0) -> "Article":
+               primary_domain: str = None, secondary_domain: str = None) -> "Article":
         """Factory method that auto-generates ID from URL."""
         article_id = hashlib.md5(url.encode()).hexdigest()
         
@@ -45,8 +44,7 @@ class Article:
             summary=summary or "",
             domains=domains or [],
             primary_domain=primary_domain,
-            secondary_domain=secondary_domain,
-            relevance_score=relevance_score
+            secondary_domain=secondary_domain
         )
     
     def to_dict(self) -> dict:
@@ -67,10 +65,7 @@ class Article:
             data["external_reference_url"] = None
         if "preview_image_url" not in data:
             data["preview_image_url"] = None
-        
-        # Ensure relevance_score is always a float, defaulting to 0.0
-        if "relevance_score" not in data or data["relevance_score"] is None:
-            data["relevance_score"] = 0.0
-            
+        if "relevance_score" not in data:
+            data["relevance_score"] = None
         return cls(**data)
 

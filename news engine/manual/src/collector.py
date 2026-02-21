@@ -19,8 +19,10 @@ RSS_FEEDS: Dict[str, str] = {
     "Google AI Blog": "https://blog.google/technology/ai/rss/",
     "OpenAI Blog": "https://openai.com/blog/rss/",
     "DeepMind Blog": "https://deepmind.google/blog/rss.xml",
+    "Meta AI Blog": "https://ai.meta.com/blog/rss/",
     "Microsoft AI Blog": "https://blogs.microsoft.com/ai/feed/",
     "Nvidia AI Blog": "https://blogs.nvidia.com/feed/",
+    "IBM Research": "https://research.ibm.com/blog/rss.xml",
     "IEEE Spectrum AI": "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss",
     "IEEE Spectrum Robotics": "https://spectrum.ieee.org/feeds/topic/robotics.rss",
     "IEEE Spectrum Computing": "https://spectrum.ieee.org/feeds/topic/computing.rss",
@@ -33,6 +35,8 @@ RSS_FEEDS: Dict[str, str] = {
     
     # === Global Mainstream News ===
     "BBC News Technology": "https://feeds.bbci.co.uk/news/technology/rss.xml",
+    "Al Jazeera Tech": "https://www.aljazeera.com/tag/science-and-technology/rss.xml",
+    "Reuters Tech": "https://www.reutersagency.com/feed/?best-topics=tech&post_type=best",
     
     # === Enterprise & Screenshot Sources ===
     "SiliconANGLE": "https://siliconangle.com/feed/",
@@ -40,7 +44,10 @@ RSS_FEEDS: Dict[str, str] = {
     "Digital Journal": "https://www.digitaljournal.com/feed",
     "NBC News Tech": "https://feeds.nbcnews.com/nbcnews/public/tech",
     "VentureBeat Enterprise": "https://venturebeat.com/category/enterprise/feed/",
+    "InfoWorld Cloud": "https://www.infoworld.com/category/cloud-computing/index.rss",
+    "InfoWorld Data": "https://www.infoworld.com/category/data-management/index.rss",
     "ZDNet Enterprise": "https://www.zdnet.com/topic/enterprise-software/rss.xml",
+    "CIO.com AI": "https://www.cio.com/category/artificial-intelligence/index.rss",
     
     # === Industry News ===
     "VentureBeat AI": "https://venturebeat.com/category/ai/feed/",
@@ -56,16 +63,6 @@ RSS_FEEDS: Dict[str, str] = {
     "Semafor Tech": "https://www.semafor.com/rss.xml",
     "The Atlantic Tech": "https://www.theatlantic.com/feed/channel/technology/",
     
-    # === DevOps & Engineering (NEW) ===
-    "DZone DevOps": "http://feeds.dzone.com/devops",
-    "DevOps.com": "https://devops.com/feed/",
-    "Martin Fowler": "https://martinfowler.com/feed.atom",
-    "Netflix Tech Blog": "https://netflixtechblog.com/feed",
-    "Uber Engineering": "https://eng.uber.com/feed/",
-    "Kubernetes Blog": "https://kubernetes.io/feed.xml",
-    "Docker Blog": "https://www.docker.com/blog/feed/",
-    "AWS DevOps Blog": "https://aws.amazon.com/blogs/devops/feed/",
-    
     # === Newsletters & Curated ===
     "Towards Data Science": "https://towardsdatascience.com/feed",
     "KDnuggets": "https://www.kdnuggets.com/feed",
@@ -76,23 +73,13 @@ RSS_FEEDS: Dict[str, str] = {
     
     # === Cloud & MLOps ===
     "AWS Machine Learning": "https://aws.amazon.com/blogs/machine-learning/feed/",
+    "Google Cloud AI": "https://cloud.google.com/blog/products/ai-machine-learning/rss",
+    "Azure AI Blog": "https://techcommunity.microsoft.com/gxcuf89792/rss/board?board.id=Azure-AI-Services",
     
     # === Security & Enterprise ===
     "Krebs on Security": "https://krebsonsecurity.com/feed/",
     "SecurityWeek": "https://feeds.feedburner.com/securityweek",
     "Dark Reading": "https://www.darkreading.com/rss.xml",
-    
-    # === AI / ML / DL Focused Sources ===
-    "AI News": "https://www.artificialintelligence-news.com/feed/",
-    "Marktechpost": "https://www.marktechpost.com/feed/",
-    "Last Week in AI": "https://lastweekin.ai/feed",
-    "Import AI Newsletter": "https://importai.substack.com/feed",
-    "AI Business": "https://aibusiness.com/rss.xml",
-    
-    # === Data Science & Research Blogs ===
-    "Neptune.ai Blog": "https://neptune.ai/blog/feed",
-    "Hugging Face Blog": "https://huggingface.co/blog/feed.xml",
-    "The Gradient": "https://thegradient.pub/rss/",
 }
 
 
@@ -166,25 +153,6 @@ SOURCE_ACCESS_TYPES: Dict[str, str] = {
     "Krebs on Security": ACCESS_OPEN,
     "SecurityWeek": ACCESS_OPEN,
     "Dark Reading": ACCESS_OPEN,
-
-    # === AI / ML / DL Focused Sources ===
-    "AI News": ACCESS_OPEN,
-    "Marktechpost": ACCESS_OPEN,
-    "Unite.AI": ACCESS_OPEN,
-    "Synced AI": ACCESS_OPEN,
-    "The Batch (deeplearning.ai)": ACCESS_OPEN,
-    "Last Week in AI": ACCESS_OPEN,
-    "Import AI Newsletter": ACCESS_OPEN,
-    "AI Business": ACCESS_OPEN,
-
-    # === Data Science & Research Blogs ===
-    "Data Science Central": ACCESS_OPEN,
-    "R-bloggers": ACCESS_OPEN,
-    "Neptune.ai Blog": ACCESS_OPEN,
-    "Weights and Biases Blog": ACCESS_OPEN,
-    "Papers With Code": ACCESS_OPEN,
-    "Hugging Face Blog": ACCESS_OPEN,
-    "The Gradient": ACCESS_OPEN,
 }
 
 

@@ -28,22 +28,13 @@ SOURCE_RELIABILITY: dict = {
     "Google Cloud AI": 0.85,
     "AWS Machine Learning": 0.85,
     "BBC News Technology": 0.85,
-    "BBC News Technology": 0.85,
     "Reuters": 0.85,
-    "Martin Fowler": 0.90,
-    "Netflix Tech Blog": 0.90,
-    "Uber Engineering": 0.88,
-    "Kubernetes Blog": 0.90,
-    "Docker Blog": 0.88,
-    "AWS DevOps Blog": 0.88,
     
     # Tier 3: Industry & Mainstream News (0.75 - 0.65)
     "VentureBeat AI": 0.75,
     "Al Jazeera": 0.75,
     "TechCrunch": 0.72,
     "SiliconANGLE": 0.72,
-    "DZone DevOps": 0.75,
-    "DevOps.com": 0.75,
     "The Verge AI": 0.7,
     "Wired AI": 0.7,
     "Ars Technica": 0.7,
@@ -70,10 +61,9 @@ SOURCE_RELIABILITY: dict = {
 DEFAULT_SOURCE_SCORE = 0.5
 
 # Scoring weights
-# Scoring weights
-WEIGHT_RELEVANCE = 0.45
-WEIGHT_RECENCY = 0.35
-WEIGHT_SOURCE = 0.20
+WEIGHT_RECENCY = 0.40
+WEIGHT_DOMAIN = 0.35
+WEIGHT_SOURCE = 0.25
 
 # Recency decay constant (days)
 RECENCY_HALF_LIFE = 7
@@ -112,72 +102,53 @@ def calculate_source_score(source: str) -> float:
 
 def calculate_domain_score(domains: List[str], max_domains: int = 3) -> float:
     """
-    Legacy domain score (deprecated in favor of BM25 relevance).
-    Kept for backward compatibility if needed.
+    Calculate domain relevance score based on number of matched domains.
+    Normalized to 0-1 range.
     """
     if not domains:
         return 0.0
+    
     count = min(len(domains), max_domains)
     return count / max_domains
 
 
-def _normalize_relevance(score: float, min_s: float, max_s: float) -> float:
-    """Dynamic min-max normalization for relevance scores."""
-    if max_s == min_s:
-        # If all scores are identical (e.g. all 0 or all 10), avoid division by zero.
-        # If scores are 0, return 0. If >0, return 1.0 (all equally relevant).
-        return 1.0 if max_s > 0 else 0.0
+def calculate_final_score(article: Article) -> float:
+    """
+    Calculate final ranking score combining all signals.
     
-    return (score - min_s) / (max_s - min_s)
+    Signals:
+        - 40% Recency (exponential decay, 7-day half-life)
+        - 35% Domain match (how many domains the article matched)
+        - 25% Source reliability (tiered publisher scores)
+        × Paywall multiplier (open=1.0, partial=0.85, subscription=0.70)
+    """
+    recency = calculate_recency_score(article.published_date)
+    source = calculate_source_score(article.source)
+    domain = calculate_domain_score(article.domains)
+    
+    final_score = (
+        recency * WEIGHT_RECENCY +
+        domain * WEIGHT_DOMAIN +
+        source * WEIGHT_SOURCE
+    )
+    
+    # Apply access-based multiplier — open content favored, paywalled downranked
+    access_type = get_source_access_type(article.source)
+    multiplier = ACCESS_WEIGHTS.get(access_type, 1.0)
+    
+    final_score *= multiplier
+    
+    return round(final_score, 3)
 
 
 def rank_articles(articles: List[Article]) -> List[Tuple[Article, float]]:
     """
-    Rank articles using dynamic per-batch normalization.
-    
-    Algorithm:
-    1. Collect all raw BM25 relevance scores.
-    2. Compute min/max for the batch.
-    3. Normalize each article's relevance score to 0.0-1.0 relative to the batch.
-    4. Compute final score = (NormRelevance * 0.45) + (Recency * 0.35) + (Source * 0.20)
-    5. Apply access-type penalties.
+    Rank articles by calculated score.
+    Returns list of (article, score) tuples sorted by score descending.
     """
-    if not articles:
-        return []
-
-    # 1. Collect scores
-    raw_scores = [a.relevance_score or 0.0 for a in articles]
-    max_score = max(raw_scores)
-    min_score = min(raw_scores)
-    
-    scored_articles = []
-    
-    for article in articles:
-        # 2. Component Scores
-        recency = calculate_recency_score(article.published_date)
-        source = calculate_source_score(article.source)
-        
-        # 3. Dynamic Normalization
-        raw_relevance = article.relevance_score or 0.0
-        norm_relevance = _normalize_relevance(raw_relevance, min_score, max_score)
-        
-        # 4. Weighted Combination
-        final_score = (
-            norm_relevance * WEIGHT_RELEVANCE +
-            recency * WEIGHT_RECENCY +
-            source * WEIGHT_SOURCE
-        )
-        
-        # 5. Access Multiplier (Paywall Penalty)
-        access_type = get_source_access_type(article.source)
-        multiplier = ACCESS_WEIGHTS.get(access_type, 1.0)
-        final_score *= multiplier
-        
-        scored_articles.append((article, round(final_score, 3)))
-        
-    # Sort descending by score
-    scored_articles.sort(key=lambda x: x[1], reverse=True)
-    return scored_articles
+    scored = [(article, calculate_final_score(article)) for article in articles]
+    scored.sort(key=lambda x: x[1], reverse=True)
+    return scored
 
 
 def get_top_articles(articles: List[Article], n: int = 10) -> List[Tuple[Article, float]]:

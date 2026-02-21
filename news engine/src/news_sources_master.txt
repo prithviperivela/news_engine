@@ -1,0 +1,433 @@
+                     NEWS SOURCE MASTER LIST — Credibility-Scored
+            Total Sources: 275 | Sectors: 17 | Score ≥0.90 = Primary | 0.80–0.89 = Strong | 0.70–0.79 = Reliable
+
+    0                     0                                  0                                          0                  0
+                                                                                                             Credibility
+#          Sector                        Source Name                            URL / Domain
+                                                                                                               Score
+1 Finance & Economy           Reuters Finance                    reuters.com/finance                               1.00
+2 Finance & Economy           Bloomberg Markets                  bloomberg.com/markets                             1.00
+3 Finance & Economy           Financial Times                    ft.com                                            1.00
+4 Finance & Economy           Wall Street Journal                wsj.com                                           0.95
+5 Finance & Economy           The Economist                      economist.com                                     0.95
+6 Finance & Economy           AP Business                        apnews.com/business                               1.00
+7 Finance & Economy           CNBC Finance                       cnbc.com/finance                                  0.90
+8 Finance & Economy           MarketWatch                        marketwatch.com                                   0.85
+9 Finance & Economy           Barron's                           barrons.com                                       0.90
+10 Finance & Economy          Forbes Finance                     forbes.com/finance                                0.80
+11 Finance & Economy          Fortune                            fortune.com                                       0.80
+12 Finance & Economy          S&P Global Market Intel            spglobal.com/marketintelligence                   0.90
+13 Finance & Economy          Morningstar News                   morningstar.com/news                              0.85
+14 Finance & Economy          Investopedia News                  investopedia.com/news                             0.75
+15 Finance & Economy          Seeking Alpha                      seekingalpha.com                                  0.70
+16 Finance & Economy          Business Insider Finance           businessinsider.com/finance                       0.80
+17 Finance & Economy          Yahoo Finance                      finance.yahoo.com                                 0.80
+18 Finance & Economy          Quartz                             qz.com                                            0.80
+19 Finance & Economy          Axios Finance                      axios.com/economy                                 0.85
+20 Finance & Economy          Nikkei Asia (Finance)              asia.nikkei.com                                   0.90
+21 Government & Politics Reuters Politics                        reuters.com/world/politics                        1.00
+22 Government & Politics AP Politics                             apnews.com/politics                               1.00
+23 Government & Politics Politico                                politico.com                                      0.90
+24 Government & Politics The Hill                                thehill.com                                       0.85
+25 Government & Politics BBC News Politics                       bbc.com/news/politics                             0.95
+26 Government & Politics The Guardian Politics                   theguardian.com/politics                          0.90
+27 Government & Politics NPR Politics                            npr.org/sections/politics                         0.90
+28 Government & Politics Washington Post Politics                washingtonpost.com/politics                       0.95
+29 Government & Politics New York Times Politics                 nytimes.com/section/politics                      0.95
+30 Government & Politics Foreign Policy                          foreignpolicy.com                                 0.90
+31 Government & Politics Foreign Affairs                         foreignaffairs.com                                0.90
+32 Government & Politics Roll Call                               rollcall.com                                      0.85
+33 Government & Politics Government Executive                    govexec.com                                       0.85
+34 Government & Politics Government Technology                   govtech.com                                       0.80
+35 Government & Politics Nextgov/FCW                             nextgov.com                                       0.80
+36 Government & Politics Defense News                            defensenews.com                                   0.85
+37 Government & Politics Congressional Quarterly                 cq.com                                            0.90
+38 Government & Politics Axios Politics                          axios.com/politics                                0.85
+39 Government & Politics The Atlantic Politics                   theatlantic.com/politics                          0.85
+40 Government & Politics Semafor Politics                        semafor.com/vertical/politics                     0.80
+41 Healthcare & Medicine STAT News                               statnews.com                                      0.95
+42 Healthcare & Medicine Reuters Health                          reuters.com/business/healthcare                   1.00
+43 Healthcare & Medicine AP Health                               apnews.com/health                                 1.00
+44 Healthcare & Medicine Modern Healthcare                       modernhealthcare.com                              0.90
+45 Healthcare & Medicine Fierce Healthcare                       fiercehealthcare.com                              0.85
+46 Healthcare & Medicine Health Affairs                          healthaffairs.org/news                            0.90
+47 Healthcare & Medicine MedPage Today                           medpagetoday.com                                  0.85
+48 Healthcare & Medicine Becker's Hospital Review                beckershospitalreview.com                         0.80
+49 Healthcare & Medicine Healio News                             healio.com/news                                   0.80
+50 Healthcare & Medicine Kaiser Health News                      khn.org                                           0.90
+51 Healthcare & Medicine The BMJ (News)                          bmj.com/news                                      0.95
+52 Healthcare & Medicine JAMA Network News                       jamanetwork.com/journals/jama/news                0.95
+53 Healthcare & Medicine Nature Medicine News                    nature.com/nm/news                                0.95
+54 Healthcare & Medicine New England Journal News                nejm.org/medical-news-and-views                   0.95
+55 Healthcare & Medicine Fierce Pharma                           fiercepharma.com                                  0.85
+56 Healthcare & Medicine BioPharma Dive                          biopharmadive.com                                 0.85
+57 Healthcare & Medicine Endpoints News                          endpts.com                                        0.85
+58 Healthcare & Medicine WHO News                                who.int/news                                      0.95
+59 Healthcare & Medicine CDC Newsroom                            cdc.gov/media/releases                            0.95
+60 Healthcare & Medicine Pharmaceutical Journal                  pharmaceutical-journal.com                        0.85
+61 Science & Environment Nature News                             nature.com/news                                   0.95
+62 Science & Environment Science Magazine News                   science.org/news                                  0.95
+63 Science & Environment Scientific American                     scientificamerican.com                            0.90
+64 Science & Environment New Scientist                 newscientist.com                   0.85
+65 Science & Environment ScienceDaily                  sciencedaily.com                   0.80
+66 Science & Environment Eos (AGU)                     eos.org                            0.85
+67 Science & Environment Physics Today                 physicstoday.scitation.org         0.85
+68 Science & Environment Chemical & Engineering News   cen.acs.org                        0.85
+69 Science & Environment Reuters Environment           reuters.com/business/environment   1.00
+70 Science & Environment The Guardian Environment      theguardian.com/environment        0.90
+71 Science & Environment E&E News                      eenews.net                         0.90
+72 Science & Environment Carbon Brief                  carbonbrief.org                    0.85
+73 Science & Environment Climate Home News             climatechangenews.com              0.80
+74 Science & Environment InsideClimate News            insideclimatenews.org              0.85
+75 Science & Environment Mongabay                      mongabay.com                       0.80
+76 Science & Environment EOS Science News              eos.org/research-spotlights        0.85
+77 Science & Environment Space.com                     space.com                          0.80
+78 Science & Environment NASA News                     nasa.gov/news                      0.95
+79 Science & Environment Phys.org                      phys.org                           0.75
+80 Science & Environment The Revelator                 therevelator.org                   0.75
+81 Legal & Regulatory    Reuters Legal                 reuters.com/legal                  1.00
+82 Legal & Regulatory    Law360                        law360.com                         0.90
+83 Legal & Regulatory    Bloomberg Law                 bloomberglaw.com/news              0.95
+84 Legal & Regulatory    The American Lawyer           americanlawyer.com                 0.85
+85 Legal & Regulatory    National Law Journal          nationallawjournal.com             0.85
+86 Legal & Regulatory    SCOTUSblog                    scotusblog.com                     0.90
+87 Legal & Regulatory    Courthouse News               courthousenews.com                 0.85
+88 Legal & Regulatory    Law.com                       law.com                            0.85
+89 Legal & Regulatory    Regulatory Affairs News       raps.org/news                      0.85
+90 Legal & Regulatory    Compliance Week               complianceweek.com                 0.80
+91 Legal & Regulatory    Above the Law                 abovethelaw.com                    0.75
+92 Legal & Regulatory    Jurist                        jurist.org                         0.80
+93 Legal & Regulatory    The Recorder                  therecorder.com                    0.80
+94 Legal & Regulatory    ABA Journal                   abajournal.com                     0.85
+ 95 Legal & Regulatory   Lexology                      lexology.com                       0.75
+    Business &
+ 96                      Reuters Business              reuters.com/business               1.00
+    Corporations
+    Business &
+ 97                      AP Business                   apnews.com/business                1.00
+    Corporations
+    Business &
+ 98                      Harvard Business Review       hbr.org                            0.90
+    Corporations
+    Business &
+ 99                      MIT Sloan Management          sloanreview.mit.edu                0.90
+    Corporations
+    Business &
+100                      Fast Company                  fastcompany.com                    0.80
+    Corporations
+    Business &
+101                      Inc. Magazine                 inc.com                            0.75
+    Corporations
+    Business &
+102                      Entrepreneur                  entrepreneur.com                   0.75
+    Corporations
+    Business &
+103                      Business Insider              businessinsider.com                0.80
+    Corporations
+    Business &
+104                      Morning Brew                  morningbrew.com                    0.75
+    Corporations
+    Business &
+105                      Axios Business                axios.com/business                 0.85
+    Corporations
+    Business &
+106                      Strategy+Business             strategy-business.com              0.85
+    Corporations
+    Business &
+107                      McKinsey Insights             mckinsey.com/insights              0.85
+    Corporations
+    Business &
+108                      Deloitte Insights             deloitte.com/insights              0.80
+    Corporations
+    Business &
+109                      Supply Chain Dive             supplychaindive.com                0.80
+    Corporations
+    Business &
+110                      Retail Dive                   retaildive.com                     0.80
+    Corporations
+    Business &
+111                      Restaurant Business           restaurantbusiness.com             0.75
+    Corporations
+    Business &
+112                      Grocery Dive                  grocerydive.com                    0.75
+    Corporations
+    Business &
+113                      CFO Dive                      cfodive.com                        0.80
+    Corporations
+    Business &
+114                      HR Dive                       hrdive.com                         0.80
+    Corporations
+    Business &
+115                      Construction Dive             constructiondive.com               0.75
+    Corporations
+116 Energy & Utilities   Reuters Energy                reuters.com/business/energy        1.00
+117 Energy & Utilities   S&P Global Commodity          spglobal.com/commodityinsights     0.90
+118 Energy & Utilities   Oil & Gas Journal             ogj.com                            0.85
+119 Energy & Utilities   Platts (S&P Energy)           platts.com                         0.90
+120 Energy & Utilities   Energy Monitor                energymonitor.ai                   0.80
+121 Energy & Utilities   Wood Mackenzie             woodmac.com/news                    0.85
+122 Energy & Utilities   BloombergNEF               bnef.com/news                       0.90
+123 Energy & Utilities   Utility Dive               utilitydive.com                     0.80
+124 Energy & Utilities   PV Magazine                pv-magazine.com                     0.80
+125 Energy & Utilities   Wind Power Monthly         windpowermonthly.com                0.80
+126 Energy & Utilities   Renewables Now             renewablesnow.com                   0.75
+127 Energy & Utilities   Electrek                   electrek.co                         0.75
+128 Energy & Utilities   E&E News Energy            eenews.net/energy                   0.90
+129 Energy & Utilities   Power Magazine             powermag.com                        0.80
+130 Energy & Utilities   Natural Gas Intelligence   naturalgasintel.com                 0.85
+131 Energy & Utilities   World Nuclear News         world-nuclear-news.org              0.80
+132 Energy & Utilities   IEA News                   iea.org/news                        0.95
+133 Energy & Utilities   IRENA Newsroom             irena.org/newsroom                  0.90
+134 Agriculture & Food   Reuters Agriculture        reuters.com/business/agriculture    1.00
+135 Agriculture & Food   AP Agriculture             apnews.com/hub/agriculture          1.00
+136 Agriculture & Food   AgriCensus                 agricensus.com                      0.85
+137 Agriculture & Food   Farm Journal               farmprogress.com                    0.80
+138 Agriculture & Food   AgWeb                      agweb.com                           0.80
+139 Agriculture & Food   DTN Progressive Farmer     dtnpf.com                           0.80
+140 Agriculture & Food   Food Business News         foodbusinessnews.net                0.80
+141 Agriculture & Food   Food Dive                  fooddive.com                        0.80
+142 Agriculture & Food   Food Navigator             foodnavigator.com                   0.80
+143 Agriculture & Food   The Packer                 thepacker.com                       0.75
+144 Agriculture & Food   Drovers Cattle Network     drovers.com                         0.75
+145 Agriculture & Food   World Grain                world-grain.com                     0.80
+146 Agriculture & Food   USDA News                  usda.gov/media/press-releases       0.95
+147 Agriculture & Food   FAO Newsroom               fao.org/newsroom                    0.95
+148 Agriculture & Food   Successful Farming         agriculture.com                     0.75
+149 Agriculture & Food   Agri-Pulse                 agri-pulse.com                      0.85
+150 Agriculture & Food   AgFunder News              agfundernews.com                    0.75
+151 Education            Reuters Education          reuters.com/world/us/education      1.00
+152 Education            AP Education               apnews.com/education                1.00
+153 Education            Education Week             edweek.org                          0.90
+154 Education            Inside Higher Ed           insidehighered.com                  0.85
+155 Education            Chronicle of Higher Ed     chronicle.com                       0.90
+156 Education            The 74 Million             the74million.org                    0.80
+157 Education            Chalkbeat                  chalkbeat.org                       0.80
+158 Education            Times Higher Education     timeshighereducation.com            0.85
+159 Education            University World News      universityworldnews.com             0.80
+160 Education            EdSurge                    edsurge.com                         0.75
+161 Education            Hechinger Report           hechingerreport.org                 0.80
+162 Education            School Library Journal     slj.com                             0.75
+163 Education            Diverse Issues             diverseeducation.com                0.75
+164 Education            Community College Daily    ccdaily.com                         0.75
+    Transportation &
+165                      Reuters Autos              reuters.com/business/autos          1.00
+    Logistics
+    Transportation &
+166                      Transport Topics           ttnews.com                          0.85
+    Logistics
+    Transportation &
+167                      FreightWaves               freightwaves.com                    0.80
+    Logistics
+    Transportation &
+168                      Journal of Commerce        joc.com                             0.85
+    Logistics
+    Transportation &
+169                      Lloyd's List               lloydslist.com                      0.85
+    Logistics
+    Transportation &
+170 Logistics            Aviation Week              aviationweek.com                    0.85
+
+      Transportation &
+171                      FlightGlobal               flightglobal.com                    0.85
+      Logistics
+      Transportation &
+172                      Railway Age                railwayage.com                      0.80
+      Logistics
+      Transportation &
+173                      Progressive Railroading    progressiverailroading.com          0.75
+      Logistics
+      Transportation &
+174                      Automotive News            autonews.com                        0.85
+      Logistics
+      Transportation &
+175                      WardsAuto                  wardsauto.com                       0.80
+      Logistics
+      Transportation &
+176                      Electrive (EV News)        electrive.com                       0.75
+      Logistics
+      Transportation &
+177                      American Shipper           freightwaves.com/american-shipper   0.80
+      Logistics
+      Transportation &
+178                      DC Velocity                dcvelocity.com                      0.75
+      Logistics
+      Transportation &
+179                      Logistics Management       logisticsmgmt.com                   0.80
+      Logistics
+      Real Estate &
+180                         Reuters Real Estate             reuters.com/business/real-estate      1.00
+      Construction
+      Real Estate &
+181                         CoStar News                     costar.com/news                       0.90
+      Construction
+      Real Estate &
+182                         Commercial Observer             commercialobserver.com                0.80
+      Construction
+      Real Estate &
+183                         Bisnow                          bisnow.com                            0.80
+      Construction
+      Real Estate &
+184                         The Real Deal                   therealdeal.com                       0.80
+      Construction
+      Real Estate &
+185                         GlobeSt                         globest.com                           0.80
+      Construction
+      Real Estate &
+186                         Housing Wire                    housingwire.com                       0.80
+      Construction
+      Real Estate &
+187                         National Real Estate Investor   nreionline.com                        0.80
+      Construction
+      Real Estate &
+188                         Engineering News-Record         enr.com                               0.85
+      Construction
+      Real Estate &
+189                         Construction Dive               constructiondive.com                  0.80
+      Construction
+      Real Estate &
+190                         Building Design+Const           bdcnetwork.com                        0.75
+      Construction
+      Real Estate &
+191                         Multifamily Executive           multifamilyexecutive.com              0.75
+      Construction
+      Real Estate &
+192                         Inman News                      inman.com                             0.75
+      Construction
+      Real Estate &
+193                         Mortgage News Daily             mortgagenewsdaily.com                 0.80
+      Construction
+194   Sports                Reuters Sports                  reuters.com/sport                     1.00
+195 Sports                  AP Sports                       apnews.com/sports                     1.00
+196 Sports                  ESPN News                       espn.com/espn/news                    0.85
+197 Sports                  BBC Sport                       bbc.com/sport                         0.90
+198 Sports                  Sports Illustrated              si.com                                0.80
+199 Sports                  The Athletic                    theathletic.com                       0.85
+200 Sports                  Bleacher Report                 bleacherreport.com                    0.75
+201 Sports                  Sky Sports News                 skysports.com/news                    0.85
+202 Sports                  Goal.com                        goal.com/news                         0.75
+203 Sports                  Cricinfo (ESPN)                 espncricinfo.com                      0.85
+204 Sports                  Cycling News                    cyclingnews.com                       0.80
+205 Sports                  Swimming World                  swimmingworldmagazine.com             0.75
+206 Sports                  Tennis World USA                tennisworldusa.org                    0.70
+207 Sports                  Motorsport.com                  motorsport.com/news                   0.75
+208 Sports                  Sports Business Journal         sportsbusinessjournal.com             0.85
+209 Sports                  Front Office Sports             frontofficesports.com                 0.80
+210 Entertainment & Media Reuters Entertainment             reuters.com/lifestyle/entertainment   1.00
+211 Entertainment & Media AP Entertainment                  apnews.com/entertainment              1.00
+212 Entertainment & Media Variety                           variety.com                           0.85
+213 Entertainment & Media The Hollywood Reporter            hollywoodreporter.com                 0.85
+214 Entertainment & Media Deadline                          deadline.com                          0.85
+215 Entertainment & Media Billboard                         billboard.com                         0.80
+216 Entertainment & Media Rolling Stone                     rollingstone.com/music/music-news     0.80
+217 Entertainment & Media IndieWire                         indiewire.com                         0.80
+218 Entertainment & Media Screen Daily                      screendaily.com                       0.80
+219 Entertainment & Media Broadcasting & Cable              nexttv.com                            0.80
+220 Entertainment & Media Mediaite                          mediaite.com                          0.75
+221 Entertainment & Media Adweek                            adweek.com                            0.80
+222 Entertainment & Media Ad Age                            adage.com                             0.85
+223 Entertainment & Media Nieman Lab                        niemanlab.org                         0.85
+224 Entertainment & Media Poynter                           poynter.org                           0.85
+225 Entertainment & Media   Columbia Journalism Review      cjr.org                               0.85
+    International &
+226                         Reuters World                   reuters.com/world                     1.00
+    Geopolitics
+    International &
+227                         AP World                        apnews.com/world-news                 1.00
+    Geopolitics
+    International &
+228                         AFP (via France24)              france24.com/en/afp                   0.95
+    Geopolitics
+    International &
+229                         Al Jazeera English              aljazeera.com/news                    0.85
+    Geopolitics
+    International &
+230                         BBC World News                  bbc.com/news/world                    0.95
+    Geopolitics
+    International &
+231                         DW News                         dw.com/en/news                        0.90
+    Geopolitics
+    International &
+232                         RFI English                     rfi.fr/en                             0.85
+    Geopolitics
+    International &
+233                         The Guardian World              theguardian.com/world                 0.90
+    Geopolitics
+    International &
+234                         The Diplomat                    thediplomat.com                       0.85
+    Geopolitics
+      International &
+235                       Carnegie Endowment         carnegieendowment.org/publications      0.90
+      Geopolitics
+      International &
+236                       Bellingcat                 bellingcat.com                          0.85
+      Geopolitics
+      International &
+237                       Crisis Group               crisisgroup.org/latest-updates          0.90
+      Geopolitics
+      International &
+238                       ACLED News                 acleddata.com/news                      0.85
+      Geopolitics
+      International &
+239                       Africa Report              theafricareport.com                     0.80
+      Geopolitics
+      International &
+240                       Middle East Eye            middleeasteye.net                       0.80
+      Geopolitics
+      International &
+241                       South China Morning Post   scmp.com/news                           0.85
+      Geopolitics
+      Cryptocurrency &
+242                       CoinDesk                   coindesk.com                            0.80
+      Blockchain
+      Cryptocurrency &
+243                       The Block                  theblock.co                             0.80
+      Blockchain
+      Cryptocurrency &
+244                       Decrypt                    decrypt.co                              0.75
+      Blockchain
+      Cryptocurrency &
+245                       Cointelegraph              cointelegraph.com                       0.75
+      Blockchain
+      Cryptocurrency &
+246                       CryptoSlate                cryptoslate.com                         0.70
+      Blockchain
+      Cryptocurrency &
+247                       Blockworks                 blockworks.co                           0.75
+      Blockchain
+      Cryptocurrency &
+248                       Reuters Crypto             reuters.com/technology/cryptocurrency   1.00
+      Blockchain
+      Cryptocurrency &
+249                       Bloomberg Crypto           bloomberg.com/crypto                    1.00
+      Blockchain
+      Cryptocurrency &
+250                       DL News                    dlnews.com                              0.75
+      Blockchain
+      Cryptocurrency &
+251                       Protos                     protos.com                              0.70
+      Blockchain
+252   Space & Defense     Reuters Space              reuters.com/science/space               1.00
+253 Space & Defense       SpaceNews                  spacenews.com                           0.90
+254 Space & Defense       Space Policy Online        spacepolicyonline.com                   0.85
+255 Space & Defense       Aviation Week Defense      aviationweek.com/defense-space          0.85
+256 Space & Defense       Defense One                defenseone.com                          0.85
+257 Space & Defense       Breaking Defense           breakingdefense.com                     0.85
+258 Space & Defense       Jane's (Janes)             janes.com/news                          0.90
+259 Space & Defense       C4ISRNET                   c4isrnet.com                            0.80
+260 Space & Defense       USNI News                  news.usni.org                           0.85
+261 Space & Defense       Spaceflight Now            spaceflightnow.com                      0.80
+262 Space & Defense       NASASpaceFlight            nasaspaceflight.com                     0.80
+263 Space & Defense       Parabolic Arc              parabolicarc.com                        0.70
+264 Human Rights & Social Reuters Global             reuters.com/world/global                1.00
+265 Human Rights & Social AP Human Rights            apnews.com/hub/human-rights             1.00
+266 Human Rights & Social Human Rights Watch         hrw.org/news                            0.90
+267 Human Rights & Social Amnesty International      amnesty.org/en/latest/news              0.85
+268 Human Rights & Social The Intercept              theintercept.com                        0.80
+269 Human Rights & Social ProPublica                 propublica.org                          0.90
+270 Human Rights & Social openDemocracy              opendemocracy.net                       0.80
+271 Human Rights & Social UNHCR News                 unhcr.org/news                          0.90
+272 Human Rights & Social IPS News                   ipsnews.net                             0.75
+273 Human Rights & Social Devex                      devex.com/news                          0.80
+274 Human Rights & Social IRIN News                  irinnews.org                            0.80
+275 Human Rights & Social Global Voices              globalvoices.org                        0.75
+

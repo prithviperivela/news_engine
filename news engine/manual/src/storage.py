@@ -10,32 +10,11 @@ from src.models import Article
 
 DATA_DIR = Path(__file__).parent.parent / "data"
 ARTICLES_FILE = DATA_DIR / "articles.json"
-ARTICLES_TEMP_FILE = DATA_DIR / "articles_temp.json"
 
 
 def ensure_data_dir():
     """Create data directory if it doesn't exist."""
     DATA_DIR.mkdir(exist_ok=True)
-
-
-def _atomic_write(articles: List[Article]):
-    """
-    Atomically write articles to storage to prevent corruption.
-    
-    1. Write to temporary file.
-    2. Flush and sync to disk.
-    3. Atomically replace the target file.
-    """
-    ensure_data_dir()
-    
-    # 1. Write to temp file
-    with open(ARTICLES_TEMP_FILE, "w", encoding="utf-8") as f:
-        json.dump([a.to_dict() for a in articles], f, indent=2, ensure_ascii=False)
-        f.flush()
-        os.fsync(f.fileno())  # Ensure data is written to physical disk
-        
-    # 2. Atomic replacement
-    os.replace(ARTICLES_TEMP_FILE, ARTICLES_FILE)
 
 
 def load_articles() -> List[Article]:
@@ -58,6 +37,8 @@ def save_articles(articles: List[Article]) -> int:
     Save articles to storage with deduplication.
     Returns number of new articles added.
     """
+    ensure_data_dir()
+    
     # Load existing articles
     existing = load_articles()
     existing_ids = {a.id for a in existing}
@@ -65,9 +46,11 @@ def save_articles(articles: List[Article]) -> int:
     # Find new articles
     new_articles = [a for a in articles if a.id not in existing_ids]
     
-    # Merge and save atomically
+    # Merge and save
     all_articles = existing + new_articles
-    _atomic_write(all_articles)
+    
+    with open(ARTICLES_FILE, "w", encoding="utf-8") as f:
+        json.dump([a.to_dict() for a in all_articles], f, indent=2, ensure_ascii=False)
     
     return len(new_articles)
 
@@ -77,6 +60,8 @@ def update_articles(articles: List[Article]) -> int:
     Update existing articles in storage (e.g., with new domain tags).
     Returns number of articles updated.
     """
+    ensure_data_dir()
+    
     # Create lookup by ID
     updates = {a.id: a for a in articles}
     
@@ -89,8 +74,9 @@ def update_articles(articles: List[Article]) -> int:
             existing[i] = updates[article.id]
             updated_count += 1
     
-    # Save back atomically
-    _atomic_write(existing)
+    # Save back
+    with open(ARTICLES_FILE, "w", encoding="utf-8") as f:
+        json.dump([a.to_dict() for a in existing], f, indent=2, ensure_ascii=False)
     
     return updated_count
 
@@ -105,8 +91,6 @@ def clear_storage():
     ensure_data_dir()
     if ARTICLES_FILE.exists():
         ARTICLES_FILE.unlink()
-    if ARTICLES_TEMP_FILE.exists():
-        ARTICLES_TEMP_FILE.unlink()
 
 
 def purge_expired_articles(max_age_hours: int = 24) -> int:
@@ -143,7 +127,8 @@ def purge_expired_articles(max_age_hours: int = 24) -> int:
     purged_count = len(articles) - len(fresh)
     
     if purged_count > 0:
-        _atomic_write(fresh)
+        with open(ARTICLES_FILE, "w", encoding="utf-8") as f:
+            json.dump([a.to_dict() for a in fresh], f, indent=2, ensure_ascii=False)
     
     return purged_count
 

@@ -1,79 +1,64 @@
-"""Domain definitions for article classification."""
+"""Domain definitions for article classification.
+
+This module provides dynamic domain configuration built from AI-generated
+keywords at runtime, replacing the former static hardcoded taxonomy.
+
+Usage:
+    from src.domains import build_domains_from_user_input, get_domain_names
+
+    DOMAINS = build_domains_from_user_input("technology", "artificial intelligence")
+    names = get_domain_names(DOMAINS)
+"""
 
 from typing import Dict, List
 
-# Domain configurations with keywords and descriptions
-DOMAINS: Dict[str, Dict] = {
-    "generative_ai": {
-        "keywords": [
-            "GPT", "LLM", "large language model", "diffusion", "generative",
-            "ChatGPT", "DALL-E", "Stable Diffusion", "transformer", "prompt",
-            "text generation", "image generation", "Claude", "Gemini", "Llama",
-            "fine-tuning", "RLHF", "instruction tuning", "foundation model"
-        ],
-        "description": "Text and image generation models, LLMs, and generative systems"
-    },
-    "machine_learning": {
-        "keywords": [
-            "neural network", "deep learning", "training", "model",
-            "supervised", "unsupervised", "classification", "regression",
-            "gradient descent", "backpropagation", "CNN", "RNN", "LSTM",
-            "reinforcement learning", "loss function", "optimizer", "epoch",
-            "overfit", "underfit", "validation", "accuracy", "precision"
-        ],
-        "description": "Machine learning algorithms, training, and model development"
-    },
-    "data_science": {
-        "keywords": [
-            "data analysis", "visualization", "pandas", "statistics",
-            "analytics", "dataset", "preprocessing", "feature engineering",
-            "exploratory", "correlation", "hypothesis", "A/B test",
-            "dashboard", "metrics", "KPI", "data pipeline", "ETL"
-        ],
-        "description": "Data processing, analysis, and business intelligence"
-    },
-    "nlp": {
-        "keywords": [
-            "natural language", "NLP", "text", "language model", "sentiment",
-            "named entity", "NER", "tokenization", "embedding", "word2vec",
-            "BERT", "parsing", "translation", "summarization", "question answering",
-            "chatbot", "conversational", "speech", "semantic", "syntax"
-        ],
-        "description": "Natural language processing and text understanding"
-    },
-    "ai_business": {
-        "keywords": [
-            "startup", "funding", "investment", "valuation", "acquisition",
-            "enterprise", "revenue", "billion", "million", "raises",
-            "Series A", "Series B", "IPO", "CEO", "company", "business",
-            "market", "industry", "partnership", "deal", "venture"
-        ],
-        "description": "AI industry news, funding, and business developments"
-    },
-    "robotics": {
-        "keywords": [
-            "robot", "robotics", "autonomous", "drone", "self-driving",
-            "manipulation", "sensor", "actuator", "navigation", "SLAM",
-            "humanoid", "automation", "control system", "motor", "gripper",
-            "perception", "motion planning", "hardware", "embodied"
-        ],
-        "description": "Robotics, autonomous systems, and physical AI"
+from src.ai_domain_generator import generate_domain
+
+
+# Runtime domain store — populated by build_domains_from_user_input()
+DOMAINS: Dict[str, Dict] = {}
+
+
+def build_domains_from_user_input(domain: str, subdomain: str) -> Dict[str, Dict]:
+    """
+    Build dynamic DOMAINS dictionary using AI-generated keywords.
+
+    Args:
+        domain: Primary domain category (e.g., "technology")
+        subdomain: Specific subdomain focus (e.g., "artificial intelligence")
+
+    Returns:
+        Dict in the shape expected by DomainClassifier:
+        {
+            "<domain_name>": {
+                "keywords": List[str],
+                "description": str
+            }
+        }
+    """
+    global DOMAINS
+
+    generated = generate_domain(domain, subdomain)
+
+    DOMAINS = {
+        generated["domain_name"]: {
+            "keywords": generated["keywords"],
+            "description": generated["description"]
+        }
     }
-}
+
+    return DOMAINS
 
 
-def get_domain_names() -> List[str]:
-    """Get list of all domain names."""
-    return list(DOMAINS.keys())
+def get_domain_names(domains_dict: Dict[str, Dict] = None) -> List[str]:
+    """
+    Get list of all domain names.
 
+    Args:
+        domains_dict: Optional domains dictionary. Falls back to module-level DOMAINS.
 
-def get_domain_keywords(domain: str) -> List[str]:
-    """Get keywords for a specific domain."""
-    if domain in DOMAINS:
-        return DOMAINS[domain]["keywords"]
-    return []
-
-
-def get_all_keywords() -> Dict[str, List[str]]:
-    """Get all domain keywords as a dictionary."""
-    return {name: config["keywords"] for name, config in DOMAINS.items()}
+    Returns:
+        List of domain name strings.
+    """
+    source = domains_dict if domains_dict is not None else DOMAINS
+    return list(source.keys())
